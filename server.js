@@ -26,10 +26,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  db.select("email", "username")
-    .from("users")
-    .then((data) => res.send(data))
-    .catch((err) => res.status(400).send(err));
+  res.send("it is works!");
 });
 
 app.post("/register", (req, res) => {
